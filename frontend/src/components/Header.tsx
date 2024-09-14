@@ -1,3 +1,4 @@
+import { LinkContainer } from "react-router-bootstrap";
 import BellIcon from "./Icons/Bell";
 import MediumIcon from "./Icons/Medium";
 import SearchIcon from "./Icons/Search";
@@ -36,23 +37,31 @@ export default function Header() {
           expand="lg"
         >
           <Container>
-            <Navbar.Brand href="/">Blogster</Navbar.Brand>
+            <LinkContainer to="/">
+              <Navbar.Brand>Blogster</Navbar.Brand>
+            </LinkContainer>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ms-auto">
                 {/* <SearchBox /> */}
-                <Nav.Link>
-                  <WriteIcon />
-                  Write
-                </Nav.Link>
+                <LinkContainer to="/write">
+                  <Nav.Link>
+                    <WriteIcon />
+                    Write
+                  </Nav.Link>
+                </LinkContainer>
 
-                <Nav.Link>
-                  <BellIcon />
-                </Nav.Link>
+                <LinkContainer to="/notifications">
+                  <Nav.Link>
+                    <BellIcon />
+                  </Nav.Link>
+                </LinkContainer>
 
-                <Nav.Link>
-                  <FaUser />
-                </Nav.Link>
+                <LinkContainer to="/profile">
+                  <Nav.Link>
+                    <FaUser />
+                  </Nav.Link>
+                </LinkContainer>
               </Nav>
             </Navbar.Collapse>
           </Container>
