@@ -1,6 +1,5 @@
 import { LinkContainer } from "react-router-bootstrap";
 import BellIcon from "./Icons/Bell";
-import MediumIcon from "./Icons/Medium";
 import SearchIcon from "./Icons/Search";
 import WriteIcon from "./Icons/Write";
 import { Nav, Navbar, Container } from "react-bootstrap";
@@ -10,7 +9,6 @@ export default function Header() {
   return (
     <div className="">
       {/* <div className="">
-        <MediumIcon />
         <div className=" bg-[#F9F9F9] w-[240px] rounded-[20px] flex items-center">
           <div className=" mx-3">
             <SearchIcon />
